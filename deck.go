@@ -9,12 +9,14 @@ import (
 
 type deck []string
 
+// this will create a new deck of cards based on how many decks we want
 func newDeck(numOfDecks int) deck {
 	cards := deck{}
-
+	// all of the different type of cards
 	cardSuit := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"}
 
+	// goes through the card types and adds them to the cards deck
 	for i := 1; i < numOfDecks; i++ {
 		for _, suit := range cardSuit {
 			for _, value := range cardValues {
@@ -49,7 +51,6 @@ func (d deck) deal() deck {
 
 	d.shuffle()
 	return card
-	// return d[:1], d[1:2]
 }
 
 func (d deck) checkValueOfHand(hand []string, score int) int {
