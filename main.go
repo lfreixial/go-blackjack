@@ -122,7 +122,7 @@ func game() {
 		time.Sleep(1 * time.Second)
 		if dealerHand > 21 {
 			fmt.Println("Dealer Bust! You Won!")
-			playerScore += 2
+			playerScore += 1
 			break
 		}
 		if dealerHand > playerHand {
